@@ -1,0 +1,13 @@
+$location-bg: #EAEAEA;
+
+.header {
+    div {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0 15px 0;
+    }
+    &__input {
+        background-color: $location-bg;
+        gap: 17px;
+    }
+}
