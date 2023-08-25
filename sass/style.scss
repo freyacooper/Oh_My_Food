@@ -1,13 +1,15 @@
-$location-bg: #EAEAEA;
+//tools
+@import "./tools/variables";
+@import "./tools/mixins";
 
-.header {
-    div {
-        display: flex;
-        justify-content: center;
-        padding: 15px 0 15px 0;
-    }
-    &__input {
-        background-color: $location-bg;
-        gap: 17px;
-    }
-}
+//modules
+@import "./modules/button";
+@import "./modules/menu_item";
+@import "./modules/restaurant_card";
+@import "./modules/header";
+@import "./modules/footer";
+
+//pages
+@import "./pages/homepage";
+@import "./pages/restaurants";
+

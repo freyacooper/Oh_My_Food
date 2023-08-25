@@ -1,0 +1,11 @@
+.header {
+    div {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0 15px 0;
+    }
+    &__input {
+        background-color: $dark-grey;
+        gap: 17px;
+    }
+}
