@@ -6,4 +6,8 @@
 .header__input {
   background-color: #EAEAEA;
   gap: 17px;
+}
+.header input {
+  background-color: #EAEAEA;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

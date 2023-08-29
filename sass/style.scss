@@ -1,15 +1,15 @@
 //tools
-@import "./tools/variables";
-@import "./tools/mixins";
+@import 'tools/variables';
+@import'./tools/mixins';
 
 //modules
-@import "./modules/button";
-@import "./modules/menu_item";
-@import "./modules/restaurant_card";
-@import "./modules/header";
-@import "./modules/footer";
+@import './modules/button';
+@import './modules/menu_item';
+@import './modules/restaurant_card';
+@import 'modules/header.scss';
+@import './modules/footer';
 
 //pages
-@import "./pages/homepage";
-@import "./pages/restaurants";
+@import './pages/homepage';
+@import './pages/restaurants';
 
