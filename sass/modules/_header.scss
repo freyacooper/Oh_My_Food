@@ -19,10 +19,7 @@
         border: none;
 
         &::placeholder {
-            color: $graphite;
-            font-family: $roboto;
-            font-size: 16px;
-            font-weight: 500;
+           @include homepage-text ($graphite)
         }
     }
 

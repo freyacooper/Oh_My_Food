@@ -2,3 +2,16 @@
     font-family: $roboto;
     font-size: 24px;
 }
+
+@mixin rectangle-card ($white) {
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+}
+
+@mixin homepage-text ($graphite) {
+    font-family: $roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: $graphite;
+}

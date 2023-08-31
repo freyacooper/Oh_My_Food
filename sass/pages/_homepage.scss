@@ -26,3 +26,14 @@ section {
         margin: 0;
     }
 }
+
+.fonctionnement {
+    &__card {
+        @include rectangle-card ($light-grey);
+        display: flex;
+    }
+
+    p {
+        @include homepage-text ($black)
+    }
+}
