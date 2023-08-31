@@ -1,0 +1,28 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        @include section-title
+    }
+}
+
+.reservez {
+    background-color: $light-grey;
+    padding: 30px 10px 30px 10px;
+    align-items: center;
+    text-align: center;
+
+    &__subheading {
+        font-family: $roboto;
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0;
+    }
+}

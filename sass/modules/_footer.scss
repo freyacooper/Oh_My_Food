@@ -1,0 +1,34 @@
+.footer {
+    background-color: $graphite;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 25px 22px 25px;
+
+    &__logo {
+        width: 140px;
+        padding: 0 0 9px 0;
+        filter: invert(1);
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        font-family: $roboto;
+        color: $white;
+        font-size: 16px;
+        list-style-type: none;
+        padding: 7px 0 0 0;
+
+        i {
+            color: $white;
+        }
+    }
+
+    .footer__iconlist {
+        font-weight: 500;
+        margin-left: 25px;
+    }
+}
