@@ -1,17 +1,22 @@
-@mixin section-title {
-    font-family: $roboto;
-    font-size: 24px;
+
+@mixin rectangle-card ($color: $white, $radius: 20px, $padding: 10px, $shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15) ) {
+    border-radius: $radius;
+    box-shadow: $shadow;
+    background-color: $color;
+    padding: $padding;
 }
 
-@mixin rectangle-card ($white) {
-    border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    background-color: $white;
+@mixin text ($size: 18px, $weight: 500, $color: $black, $margin: 0) {
+    font-family: $roboto;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    margin: $margin;
 }
 
-@mixin homepage-text ($graphite) {
-    font-family: $roboto;
-    font-size: 16px;
-    font-weight: 500;
-    color: $graphite;
+@mixin flex ($direction: column, $justify: space-between, $align: center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }

@@ -1,7 +1,6 @@
 .header {
     div {
-        display: flex;
-        justify-content: center;
+        @include flex ($direction: row, $justify: center);
         padding: 15px 0 15px 0;
     }
     &__logo {
@@ -13,13 +12,15 @@
         background-color: $dark-grey;
         gap: 15px;
     }
-    
+    i {
+        color: $graphite;
+    }
     input {
         background-color: $dark-grey;
         border: none;
 
         &::placeholder {
-           @include homepage-text ($graphite)
+           @include text ($size: 16px, $color: $graphite);
         }
     }
 

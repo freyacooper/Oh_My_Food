@@ -2,12 +2,12 @@
 @import 'tools/variables';
 @import'./tools/mixins';
 
-//modules
-@import './modules/button';
-@import './modules/menu_item';
-@import './modules/restaurant_card';
-@import 'modules/header.scss';
-@import './modules/footer';
+//composants
+@import './composants/button';
+@import './composants/menu_item';
+@import './composants/restaurant_card';
+@import './composants/header.scss';
+@import './composants/footer';
 
 //pages
 @import './pages/homepage';

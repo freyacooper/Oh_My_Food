@@ -16,19 +16,18 @@
     }
 
     li {
-        font-family: $roboto;
-        color: $white;
-        font-size: 16px;
+        @include text ($size: 16px, $weight: 400, $color: $white);
         list-style-type: none;
         padding: 7px 0 0 0;
-
         i {
             color: $white;
         }
     }
 
     .footer__iconlist {
-        font-weight: 500;
+        li {
+        @include text ($size: 16px, $weight: 500, $color: $white);
         margin-left: 25px;
+        }
     }
 }
