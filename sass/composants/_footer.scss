@@ -5,20 +5,31 @@
     padding: 22px 25px 22px 25px;
 
     &__logo {
-        width: 140px;
+        font-size: 18px;
         padding: 0 0 9px 0;
-        filter: invert(1);
+        color: $white;
     }
-
+    div {
+        @media screen and (min-width: 1366px) {
+            @include flex ($direction: row, $justify: space-between);
+            
+        }
+    }
     ul {
         padding: 0;
         margin: 0;
+        @media screen and (min-width: 1366px) {
+            @include flex ($direction: row, $justify: space-between);
+           
+            
+        }
     }
 
     li {
         @include text ($size: 16px, $weight: 400, $color: $white);
         list-style-type: none;
         padding: 7px 0 0 0;
+        width: 100%;
         i {
             color: $white;
         }
@@ -29,5 +40,9 @@
         @include text ($size: 16px, $weight: 500, $color: $white);
         margin-left: 25px;
         }
+    }
+    @media screen and (min-width: 1366px) {
+        @include flex ($direction: row-reverse, $justify: flex-start);
+        
     }
 }
