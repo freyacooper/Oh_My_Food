@@ -3,16 +3,18 @@
     display: flex;
     flex-direction: column;
     padding: 22px 25px 22px 25px;
+    
 
     &__logo {
         font-size: 18px;
-        padding: 0 0 9px 0;
         color: $white;
     }
     div {
+        padding: 9px 0 0 0;
         @media screen and (min-width: 1366px) {
             @include flex ($direction: row, $justify: space-between);
-            
+            padding: 0;
+            gap: 80px;
         }
     }
     ul {
@@ -20,8 +22,8 @@
         margin: 0;
         @media screen and (min-width: 1366px) {
             @include flex ($direction: row, $justify: space-between);
-           
-            
+            flex-wrap: nowrap;
+            gap: 7%;
         }
     }
 
@@ -29,9 +31,12 @@
         @include text ($size: 16px, $weight: 400, $color: $white);
         list-style-type: none;
         padding: 7px 0 0 0;
-        width: 100%;
         i {
             color: $white;
+        }
+        @media screen and (min-width: 1366px) {
+            @include flex ($direction: row, $justify: flex-start);
+            white-space: nowrap;
         }
     }
 
@@ -43,6 +48,7 @@
     }
     @media screen and (min-width: 1366px) {
         @include flex ($direction: row-reverse, $justify: flex-start);
-        
+        padding: 60px 25px 30px 25px;
+        gap: 120px;
     }
 }
