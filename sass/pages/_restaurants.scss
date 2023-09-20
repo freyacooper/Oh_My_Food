@@ -1,23 +1,42 @@
 .image {
     padding: 0;
-    
+    img {
+        max-height: 450px;
+        object-fit: cover;
+    }
 }
-.menu{
+.restaurant {
+    @include flex ($align: flex-start);
     padding: 30px 15px;
     background-color: $light-grey;
     border-radius: 50px 50px 0 0;
     position: relative;
     top: -50px;
+    margin-bottom: -50px;
+    max-width: 1055px;
+    margin: auto auto -50px auto;
     &__title {
         @include flex ($direction: row);
         padding: 0 10px;
+        width: 90%;
+        max-width: 350px;
+        margin: auto;
         h1 {
             font-size: 28px;
         }
     }
+    button {
+        align-self: center;
+        margin: 30px 0 20px 0;
+    }
+}
+.menu {
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
     &__course {
         margin: 0 0 15px 0;
-        padding: 40px 0 0 0;
+        padding: 30px 0 0 0;
         position: relative;
         width: 40px;
         height: 26px;
@@ -28,16 +47,18 @@
             position: absolute;
         }
     }
-    
+    &__group {
+        width: 100%;
+    }
 }
 
 .hearts-wrapper {
     position: relative;
+    width: 22px;
 }
 svg {
     position: absolute;
     top: -10px;
-    right: 12px;
     width: 22px;
 }
 .liked {
@@ -56,12 +77,23 @@ svg {
     @include flex ($direction: row, $align: flex-end);
     margin-bottom: 12px;
     gap: 0px;
-    h3{
-        padding: 0 15px 15px 0;
-        transform: translateX(0);
-        &:hover {
-            transform: translateX(-59px);
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    &:hover {
+        h3 {
+            transform: translateX(-59px); 
         }
+        .menu-item__check {
+            right: 0;
+        }
+        h5, p {
+            width: calc(100% - 59px);
+        }
+    }
+    h3{
+        padding: 0 15px 15px 5px;
+        transition: transform 500ms ease;
     }
     h5 {
         @include text ();
@@ -72,12 +104,19 @@ svg {
     &__content {
         @include flex ($align: flex-start);
         gap: 5px;
-        padding: 15px 0 15px 15px;
-        width: 65%;
+        padding: 12px 0 12px 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        
+        width: 100%;
+        h5, p {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            min-width: 0;
+            transition: width 250ms ease;
+        }
     }
     &__check {
         border-radius: 0 15px 15px 0;
@@ -85,11 +124,9 @@ svg {
         width: 59px;
         background-color: $light-green;
         @include flex ($justify: center);
-        transform: translateX(59px);
-
-        &:hover {
-            transform: translateX(0);
-        }
+        position: absolute;
+        right: -59px;
+        transition: right 500ms ease 50ms;
         i {
             color: $white;
         }

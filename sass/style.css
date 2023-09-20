@@ -76,7 +76,7 @@ button:hover {
 .footer div {
   padding: 9px 0 0 0;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 800px) {
   .footer div {
     display: flex;
     flex-direction: row;
@@ -90,7 +90,7 @@ button:hover {
   padding: 0;
   margin: 0;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 800px) {
   .footer ul {
     display: flex;
     flex-direction: row;
@@ -112,7 +112,7 @@ button:hover {
 .footer li i {
   color: #FFFFFF;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 800px) {
   .footer li {
     display: flex;
     flex-direction: row;
@@ -129,14 +129,14 @@ button:hover {
   margin: 0;
   margin-left: 25px;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 800px) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
     padding: 60px 25px 30px 25px;
-    gap: 120px;
+    gap: 8%;
   }
 }
 
@@ -286,17 +286,35 @@ section h2 {
 
 .restaurants {
   background-color: #F6F6F6;
-  max-width: 475px;
-  margin: auto;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .restaurants {
     margin: 0;
     max-width: none;
+    padding: 30px 100px 60px 100px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurants {
+    padding: 40px 180px 60px 180px;
+  }
+}
+.restaurants__content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 475px;
+  margin: auto;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .restaurants__content {
+    max-width: none;
+    margin: 0;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .rest-card-wrapper {
     display: flex;
     flex-direction: row;
@@ -378,7 +396,7 @@ section h2 {
   color: #008766;
   margin: 0;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .rest-card {
     width: 46%;
     margin-bottom: 50px;
@@ -388,27 +406,52 @@ section h2 {
 .image {
   padding: 0;
 }
+.image img {
+  max-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
-.menu {
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 30px 15px;
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
   position: relative;
   top: -50px;
+  margin-bottom: -50px;
+  max-width: 1055px;
+  margin: auto auto -50px auto;
 }
-.menu__title {
+.restaurant__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
 }
-.menu__title h1 {
+.restaurant__title h1 {
   font-size: 28px;
+}
+.restaurant button {
+  align-self: center;
+  margin: 30px 0 20px 0;
+}
+
+.menu {
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
 }
 .menu__course {
   margin: 0 0 15px 0;
-  padding: 40px 0 0 0;
+  padding: 30px 0 0 0;
   position: relative;
   width: 40px;
   height: 26px;
@@ -423,15 +466,18 @@ section h2 {
   text-transform: uppercase;
   position: absolute;
 }
+.menu__group {
+  width: 100%;
+}
 
 .hearts-wrapper {
   position: relative;
+  width: 22px;
 }
 
 svg {
   position: absolute;
   top: -10px;
-  right: 12px;
   width: 22px;
 }
 
@@ -455,13 +501,22 @@ svg {
   align-items: flex-end;
   margin-bottom: 12px;
   gap: 0px;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+.menu-item:hover h3 {
+  transform: translateX(-59px);
+}
+.menu-item:hover .menu-item__check {
+  right: 0;
+}
+.menu-item:hover h5, .menu-item:hover p {
+  width: calc(100% - 59px);
 }
 .menu-item h3 {
-  padding: 0 15px 15px 0;
-  transform: translateX(0);
-}
-.menu-item h3:hover {
-  transform: translateX(-59px);
+  padding: 0 15px 15px 5px;
+  transition: transform 500ms ease;
 }
 .menu-item h5 {
   font-family: "Roboto", sans-serif;
@@ -483,11 +538,19 @@ svg {
   justify-content: space-between;
   align-items: flex-start;
   gap: 5px;
-  padding: 15px 0 15px 15px;
-  width: 65%;
+  padding: 12px 0 12px 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
+}
+.menu-item__content h5, .menu-item__content p {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  transition: width 250ms ease;
 }
 .menu-item__check {
   border-radius: 0 15px 15px 0;
@@ -498,10 +561,9 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(59px);
-}
-.menu-item__check:hover {
-  transform: translateX(0);
+  position: absolute;
+  right: -59px;
+  transition: right 500ms ease 50ms;
 }
 .menu-item__check i {
   color: #FFFFFF;
