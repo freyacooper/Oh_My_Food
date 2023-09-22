@@ -1,6 +1,7 @@
 //tools
-@import 'tools/variables';
+@import './tools/variables';
 @import'./tools/mixins';
+@import'./tools/animations';
 
 //composants
 @import './composants/button';

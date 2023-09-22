@@ -41,6 +41,7 @@
         width: 40px;
         height: 26px;
         border-bottom: 3px solid $light-green;
+        animation: slide-up 1000ms ease 100ms backwards;
         h4 {
             @include text ($size: 16px, $weight: 300);
             text-transform: uppercase;
@@ -80,6 +81,12 @@ svg {
     position: relative;
     min-width: 0;
     overflow: hidden;
+    animation: 500ms ease-out 5s backwards slide-in;
+    @for $i from 1 through $num-items {
+        &--#{$i} {
+            animation-delay: $anim-delay + ($i * 200);
+        }
+    }
     &:hover {
         h3 {
             transform: translateX(-59px); 
