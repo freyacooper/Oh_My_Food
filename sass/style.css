@@ -64,18 +64,18 @@
   1% {
     opacity: 1;
   }
-  95% {
+  78% {
     opacity: 1;
     transform: translateY(0);
   }
-  98% {
+  82% {
     transform: translateY(100px);
     opacity: 1;
     animation-timing-function: ease;
   }
   100% {
     opacity: 1;
-    transform: translateY(-400px);
+    transform: translateY(-1000px);
   }
 }
 button {
@@ -238,17 +238,17 @@ button:hover {
   transform: translateY(-1000px);
 }
 .loader .oh {
-  animation: drop 1500ms ease 100ms;
+  animation: drop 1400ms ease 100ms;
 }
 .loader .my {
-  animation: drop 1500ms ease 500ms;
+  animation: drop 1400ms ease 450ms;
 }
 .loader .food {
-  animation: drop 1500ms ease 900ms;
+  animation: drop 1400ms ease 850ms;
 }
 .loader .ohmyfood {
   position: absolute;
-  animation: bounce-up 1900ms ease both 1500ms;
+  animation: bounce-up 2000ms ease both 1500ms;
 }
 
 body {

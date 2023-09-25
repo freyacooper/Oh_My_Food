@@ -13,16 +13,16 @@
         transform: translateY(-1000px);
     }
     .oh {
-        animation: drop 1500ms ease 100ms; 
+        animation: drop 1400ms ease 100ms; 
     }
     .my {
-        animation: drop 1500ms ease 500ms;
+        animation: drop 1400ms ease 450ms;
     }
     .food {
-        animation: drop 1500ms ease 900ms;
+        animation: drop 1400ms ease 850ms;
     }
     .ohmyfood {
         position: absolute;
-        animation: bounce-up 1900ms ease both 1500ms;
+        animation: bounce-up 2000ms ease both 1500ms;
     }
 }
