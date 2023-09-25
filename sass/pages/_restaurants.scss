@@ -81,7 +81,7 @@ svg {
     position: relative;
     min-width: 0;
     overflow: hidden;
-    animation: 500ms ease-out 5s backwards slide-in;
+    animation: 500ms ease-out backwards slide-in;
     @for $i from 1 through $num-items {
         &--#{$i} {
             animation-delay: $anim-delay + ($i * 200);

@@ -1,6 +1,10 @@
 @keyframes slide-in {
     0% {
         transform: translateX(-110%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
     }
     100% {
         transform: translateX(0);
@@ -19,3 +23,62 @@
         opacity: 1;
     }
 }
+
+@keyframes loader {
+    0% {
+        scale: 1;
+    }
+    40% {
+        background-color: $purple;
+    }
+    94% {
+        transform: translateY(0);
+        transform: scaleY(1);
+    }
+    100% {
+        transform: translateY(-1000px);
+        transform-origin: top;
+        background-color: $pink;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes drop {
+    0% {
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: translateY(100px);
+        animation-timing-function: ease-out;
+    }
+    30% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    1% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    98% {
+        transform: translateY(100px);
+        opacity: 1;
+        animation-timing-function: ease;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-400px);
+    }
+}
+
