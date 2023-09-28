@@ -163,7 +163,7 @@ section {
         @include text ($size: 17px, $weight: 300, $margin: 5px 0 0 0);
     }
     &__content {
-        @include flex ($direction: row, $align:top );
+        @include flex ($direction: row, $align:start );
         padding: 16px 13px;
         
         .hearts-wrapper {
