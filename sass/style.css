@@ -24,15 +24,11 @@
   }
 }
 @keyframes loader {
-  0% {
-    scale: 1;
-  }
   40% {
     background-color: #9356DC;
   }
   94% {
     transform: translateY(0);
-    transform: scaleY(1);
   }
   100% {
     transform: translateY(-1000px);
@@ -225,7 +221,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -516,6 +512,8 @@ section h2 {
 
 .image {
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .image img {
   max-height: 450px;
@@ -547,7 +545,10 @@ section h2 {
   max-width: 350px;
   margin: auto;
 }
-.restaurant__title h1 {
+.restaurant__title h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  margin: 0;
   font-size: 28px;
 }
 .restaurant button {
@@ -569,7 +570,7 @@ section h2 {
   border-bottom: 3px solid #99E2D0;
   animation: slide-up 1000ms ease 100ms backwards;
 }
-.menu__course h4 {
+.menu__course h3 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -630,20 +631,25 @@ svg {
 .menu-item--4 {
   animation-delay: 1450ms;
 }
-.menu-item:hover h3 {
+.menu-item:hover h5 {
   transform: translateX(-59px);
 }
 .menu-item:hover .menu-item__check {
   right: 0;
 }
-.menu-item:hover h5, .menu-item:hover p {
+.menu-item:hover h4, .menu-item:hover p {
   width: calc(100% - 59px);
 }
-.menu-item h3 {
+.menu-item h5 {
   padding: 0 15px 15px 5px;
   transition: transform 500ms ease;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
 }
-.menu-item h5 {
+.menu-item h4 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -669,7 +675,7 @@ svg {
   white-space: nowrap;
   width: 100%;
 }
-.menu-item__content h5, .menu-item__content p {
+.menu-item__content h4, .menu-item__content p {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
