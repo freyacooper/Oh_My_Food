@@ -31,7 +31,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-1000px);
+    transform: translateY(-1500px);
     transform-origin: top;
     background-color: #FF79DA;
     animation-timing-function: ease-in-out;
